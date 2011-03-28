@@ -1,0 +1,87 @@
+﻿@model Dictionary<string, double>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@section head {
+
+<script>
+
+    function deleteAWSFile(key) {
+
+        if (confirm('Are you sure you want to delete?')) {
+        
+            var parms = {
+                key: key
+            };
+
+            $.ajax({
+                type: "POST",
+                async: false,
+                url: "/Home/JSONDeleteAWSFile",
+                data: parms,
+                dataType: "json",
+                success: function (data) {
+
+                    alert("File successfully deleted");
+                    location.reload();
+                }
+            });
+        
+        }
+    }
+
+</script>
+
+}
+
+<h1>Amazon S3</h1>
+
+<h2>Upload</h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+  
+  <label for="file">Filename:</label>
+  <input type="file" name="file" id="file" />
+
+  <br />
+  <br />
+
+  <input type="submit" value="submit" />
+</form>
+
+<h2>Files</h2>
+
+<table>
+
+    <tr>
+        <th>
+            file
+        </th> 
+        <th>
+            size (mb)
+        </th> 
+    </tr>
+
+@foreach (var img in Model)
+{
+    <tr>
+        <td>
+            <a href="https://s3.amazonaws.com/ajh/@img.Key">@img.Key</a>
+        </td>
+        <td>
+            @img.Value
+        </td>
+        <td>
+            <img src="/Content/img/delete.png" onclick="deleteAWSFile('@img.Key');" style="cursor: pointer" />
+        </td>
+    </tr>
+}
+
+<tr>
+<td></td>
+<td style="border-top: 1px solid black">@Model.Select(x => x.Value).Sum()</td>
+</tr>
+
+</table>

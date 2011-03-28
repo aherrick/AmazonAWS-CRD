@@ -1,0 +1,6 @@
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\bin\AmazonAWSExampleSDK.dll
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\bin\AmazonAWSExampleSDK.pdb
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\bin\AWSSDK.dll
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\obj\Debug\AmazonAWSExampleSDK.dll
+C:\Projects\AJH Data\_fun_\AmazonAWSExampleSDK\AmazonAWSExampleSDK\obj\Debug\AmazonAWSExampleSDK.pdb
