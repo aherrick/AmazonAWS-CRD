@@ -1,0 +1,3 @@
+Extremely simple Amazon AWS web application using the SDK.
+
+Presents 3 scenarios.  Create/Upload (New File), Read (List all files) Delete, delete an existing file.
